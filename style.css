@@ -1,14 +1,141 @@
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
 }
 
+/* header */
 header {
-    min-height: 100vh;
-    width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url("./image/background.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    /* position: relative; */
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url("./image/banner.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.8rem 2.4rem;
+}
+
+nav .logo img {
+    width: 150px;
+}
+
+.nav-list {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-list ul li {
+    display: inline-block;
+    margin: 0 0.5rem;
+    list-style: none;
+    position: relative;
+    padding: 0.7rem;
+
+}
+
+.nav-list ul li a {
+    text-decoration: none;
+    color: #fff;
+
+}
+
+.nav-list ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-list ul li:hover::after {
+    width: 75%;
+}
+
+.text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 90%;
+    color: #fff;
+}
+
+.text-box h1 {
+    font-size: 3.6rem;
+}
+
+.text-box p {
+    margin: 12px 0 40px;
+}
+
+.text-box .hero-btn {
+    display: inline-block;
+    padding: 12px 34px;
+    color: #fff;
+    border: solid 1px #fff;
+    text-decoration: none;
+    background: transparent;
+    position: relative;
+    transition: 0.7s;
+}
+
+.text-box .hero-btn:hover {
+    border: solid 1px #f44336;
+    background-color: #f44336;
+}
+
+nav .fa {
+    display: none;
+}
+
+/* ? responsive */
+@media (max-width: 770px) {
+    nav {
+        align-items: stretch;
+        padding: 1.5rem 1.2rem;
+    }
+
+    .text-box h1 {
+        font-size: 2.2rem;
+    }
+
+    .nav-list {
+        background-color: #f44336;
+        height: 100vh;
+        width: 200px;
+        position: absolute;
+        right: -230px;
+        top: 0;
+        z-index: 2;
+        padding: 25px 10px;
+        transition: 1s;
+        text-align: left;
+    }
+
+    .nav-list ul li {
+        display: block;
+        margin: 20px;
+        text-align: left;
+        overflow-y: hidden;
+    }
+
+    nav .fa{
+        color: #fff;
+        cursor: pointer;
+        display: block;
+        font-size: 23px;
+        margin: 10px;
+    }
 }
