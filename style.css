@@ -5,6 +5,10 @@
   overflow-x: hidden;
 }
 
+body {
+    background: #f9fafb;
+}
+
 /* header */
 header {
   min-height: 100vh;
@@ -81,7 +85,7 @@ nav .logo img {
     margin: 12px 0 40px;
 }
 
-.text-box .hero-btn {
+.hero-btn {
     display: inline-block;
     padding: 12px 34px;
     color: #fff;
@@ -92,7 +96,7 @@ nav .logo img {
     transition: 0.7s;
 }
 
-.text-box .hero-btn:hover {
+.hero-btn:hover {
     border: solid 1px #f44336;
     background-color: #f44336;
 }
@@ -340,6 +344,26 @@ nav .fa {
     margin: 15px 0;
 }
 
+/* call to action */
+.cta {
+    width: 85%;
+    margin: 100px auto;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url("./image/banner2.jpg");
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 130px 0;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    color: #fff;
+}
+
+.cta h1{
+    margin-bottom: 40px;
+    padding: 0;
+}
+
 /* ? responsive */
 @media (max-width: 770px) {
     nav {
@@ -418,5 +442,15 @@ nav .fa {
 
     .testimonials-item h3 {
         text-align: center;
+    }
+
+    .cta h1 {
+        font-size: 20px;
+        padding: 5px;
+    }
+
+    .cta .hero-btn {
+        padding: 10px 28px;
+        font-size: 14px;
     }
 }
