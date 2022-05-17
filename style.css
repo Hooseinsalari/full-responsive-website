@@ -59,7 +59,7 @@ nav .logo img {
 }
 
 .nav-list ul li:hover::after {
-    width: 75%;
+    width: 100%;
 }
 
 .text-box {
@@ -100,6 +100,60 @@ nav .fa {
     display: none;
 }
 
+/* ----course---- */
+
+.course {
+    /* background-color: aquamarine; */
+    /* width: 80%; */
+    /* margin: auto; */
+    padding: 100px 50px 0;
+    text-align: center;
+    /* padding-top: 100px; */
+}
+
+.course h1 {
+    font-size: 3.75;
+    font-weight: 600;
+}
+
+.course p {
+    font-size: 0.95rem;
+    color: #777;
+    padding: 11px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.course-section {
+    display: flex;
+    margin-top: 5%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.course-item {
+    /* flex-basis: 31%; */
+    width: 20rem;
+    padding: 20px 12px;
+    background: rgb(250, 250, 250);
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin: 0 10px 5%;
+    transition: 0.5s;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.course-item h3 {
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.course-item:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
 /* ? responsive */
 @media (max-width: 770px) {
     nav {
@@ -137,5 +191,17 @@ nav .fa {
         display: block;
         font-size: 23px;
         margin: 10px;
+    }
+
+    .course {
+        padding: 100px 0 0;
+    }
+
+    .course-section {
+        flex-direction: column;
+    }
+
+    .course-item {
+        width: 18rem;
     }
 }
