@@ -15,6 +15,7 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
+  overflow: hidden;
 }
 
 nav {
@@ -100,7 +101,7 @@ nav .fa {
     display: none;
 }
 
-/* ----course---- */
+/** ----course---- */
 
 .course {
     /* background-color: aquamarine; */
@@ -154,6 +155,82 @@ nav .fa {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
+/*? campus */
+.campus {
+    padding: 100px 50px 0;
+    text-align: center;
+}
+
+.campus h1 {
+    font-size: 3.75;
+    font-weight: 600;
+}
+
+.campus p {
+    font-size: 0.95rem;
+    color: #777;
+    padding: 11px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.campus-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 3%;
+    flex-wrap: wrap;
+}
+
+.campus-item {
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    width: 20rem;
+    margin: 10px;
+}
+
+.campus-item img {
+    width: 100%;
+    transition: 0.5s;
+    display: block; /* trick */
+}
+
+.layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    font-weight: 600;
+}
+
+.layer h3 {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 100%;
+    color: #f1f5f9;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.layer:hover {
+    background: rgba(10, 64, 95, 0.52);
+}
+
+.layer:hover h3 {
+    bottom: 50%;
+    opacity: 1;
+}
+
+.campus-item:hover img {
+    transform: scale(1.5);
+}
+
 /* ? responsive */
 @media (max-width: 770px) {
     nav {
@@ -203,5 +280,9 @@ nav .fa {
 
     .course-item {
         width: 18rem;
+    }
+
+    .campus {
+        padding: 100px 0 0;
     }
 }
